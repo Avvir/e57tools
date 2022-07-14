@@ -428,6 +428,7 @@ main(
                     StructureNode  image(images2D.get(child));
                     path inf_path = dst/path(string("image2d-")+lexical_cast<string>(child)+".inf");
                     ofstream inf(inf_path);
+                    inf.precision(16);
                     string reptype;
                     if (image.isDefined("visualReferenceRepresentation"))
                         reptype = "visualReferenceRepresentation";
